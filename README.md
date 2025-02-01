@@ -1,25 +1,25 @@
-# [Project Name] 🎯
+# NUTRITRACK 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: Estrella
 
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Member 1: Jiya Mary Jacob - Govt. Model Engineering College Thrikkakara
+- Member 2: Alna Rebecca Siby - Govt. Model Engineering College Thrikkakara
+- Member 3: Niya Shine - Govt. Model Engineering College Thrikkakara
 
 ### Hosted Project Link
 [mention your project hosted project link here]
 
 ### Project Description
 NUTRITRACK is a personalized nutrition assistant that helps users manage their health by calculating BMI and providing daily calorie intake recommendations.
-It uses AI to suggest balanced meals for breakfast, lunch and dinner within calorie limits. Users can log their food intake, track calories, and compare it 
-against their suggested daily goal to maintain a healthy lifestyle.
+It uses AI to suggest balanced meals for breakfast, lunch, and dinner which are within calorie limits. Users can log their food intake, track calories, and compare it 
+against their suggested daily goal of maintaining a healthy lifestyle.
 
-### The Problem statement
-[What ridiculous problem are you solving?]
+### The Problem Statement
+Maintaining a healthy diet can be overwhelming, with many people struggling to track their calorie intake, choose balanced meals, and stay within their ideal nutrition goals. Without personalized guidance, it’s easy to fall into unhealthy eating habits.
 
 ### The Solution
 [How are you solving it? Keep it fun!]
@@ -27,15 +27,10 @@ against their suggested daily goal to maintain a healthy lifestyle.
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- HTML, CSS, JavaScript, Python, StreamLit
+- Django
+- [libraries]
+- VS Code, GitHub, Google API
 
 ### Implementation
 For Software:
