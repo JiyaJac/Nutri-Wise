@@ -13,7 +13,9 @@
         }
 
         body {
-            background-color: #f0f8ff;
+            background: linear-gradient(135deg, #ebecf0 0%, #b8e3f8 100%);
+            
+            
         }
 
         .container {
@@ -25,9 +27,32 @@
         nav {
             display: flex;
             align-items: center;
+
             justify-content: space-between;
             padding: 1rem 0;
         }
+        .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;  /* Space between logo and text */
+}
+
+.logo {
+    width: 40px; /* Set the logo width */
+    height: 40px; /* Set the logo height */
+    overflow: hidden; /* Ensure image fits within the bounds */
+}
+
+.logo img {
+    width: 100%; /* Make the image fill the logo div */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.brand-name {
+    font-size: 28px;
+    color: #0066cc;
+    font-weight: bold;
+}
 
         .logo-container {
             display: flex;
@@ -37,16 +62,16 @@
 
         .logo {
             
-            width: 50px;
-            height: 50px;
+            width: 10%;
+            height: 10%;
             background-color: #1e90ff;
-            border-radius: 50%;
+            border-radius: 10%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-weight: bold;
-            font-size: 24px;
+            font-size: 10px;
         }
 
         .brand-name {
@@ -71,8 +96,9 @@
         }
 
         .hero p {
+            
             font-size: 20px;
-            color: #4a4a4a;
+            color: #4e34dc;
             max-width: 600px;
             line-height: 1.6;
         }
@@ -110,7 +136,9 @@
     <div class="container">
         <nav>
             <div class="logo-container">
-                <div class="logo">N</div>
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                </div>
                 <div class="brand-name">NUTRITRACK</div>
             </div>
         </nav>
@@ -120,7 +148,7 @@
             <p>
                 Welcome to NutriTrack, Your personal health companion! NutriTrack helps you calculate your BMI, track your daily calorie needs, and provides AI-generated meal recommendations tailored to your goals.
             </p>
-            <button class="get-started" onclick="window.location.href = 'http://127.0.0.1:5500/Tinkerhack/login/signup.html'">Get Started</button>
+            <button class="get-started">Get Started</button>
 
         </main>
     </div>
