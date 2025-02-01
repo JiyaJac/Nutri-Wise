@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        :root {
+            --primary-blue: #1e90ff;
+            --dark-blue: #0066cc;
+            --light-blue: #f0f8ff;
+            --text-blue: #003366;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-blue);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        h1 {
+            color: var(--text-blue);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-blue);
+            font-weight: bold;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--primary-blue);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--dark-blue);
+        }
+        
+        button {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: var(--dark-blue);
+        }
+        
+        .result {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--light-blue);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .result h2 {
+            color: var(--text-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .result p {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form-group">
+                <label>{{ field.label }}</label>
+                {{ field }}
+            </div>
+            {% endfor %}
+            <button type="submit">Calculate BMI</button>
+        </form>
+        
+        {% if result %}
+        <div class="result">
+            <h2>Your BMI Result</h2>
+            <p>BMI: {{ result.bmi }}</p>
+            <p>Category: {{ category }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

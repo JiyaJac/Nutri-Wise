@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        .result-card {
+            background: rgba(255, 255, 255, 0.90);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.2);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen py-12 px-4">
+    <div class="max-w-md mx-auto glass-card p-8">
+        <h1 class="text-3xl font-bold text-blue-900 mb-8 text-center">BMI Calculator</h1>
+        
+        <form method="POST" class="space-y-6">
+            {% csrf_token %}
+            <div>
+                <label for="age" class="block text-sm font-medium text-blue-900">Age</label>
+                <input type="number" id="age" name="age" required 
+                       class="mt-1 block w-full rounded-md border-blue-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+            </div>
+            
+            <div>
+                <label for="height" class="block text-sm font-medium text-blue-900">Height (cm)</label>
+                <input type="number" id="height" name="height" required 
+                       class="mt-1 block w-full rounded-md border-blue-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+            </div>
+            
+            <div>
+                <label for="weight" class="block text-sm font-medium text-blue-900">Weight (kg)</label>
+                <input type="number" id="weight" name="weight" step="0.1" required 
+                       class="mt-1 block w-full rounded-md border-blue-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+            </div>
+            
+            <div>
+                <label for="gender" class="block text-sm font-medium text-blue-900">Gender</label>
+                <select id="gender" name="gender" required 
+                        class="mt-1 block w-full rounded-md border-blue-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <button type="submit" 
+                    class="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md 
+                           transition duration-300 ease-in-out transform hover:scale-105">
+                Calculate BMI
+            </button>
+        </form>
+
+        {% if result %}
+            {% if result.error %}
+                <div class="mt-8 result-card p-6 bg-red-50 border border-red-200">
+                    <p class="text-red-600">{{ result.error }}</p>
+                </div>
+            {% else %}
+                <div class="mt-8 result-card p-6 space-y-4">
+                    <div class="text-center">
+                        <h2 class="text-2xl font-bold {{ result.color_class }}">Your BMI: {{ result.bmi }}</h2>
+                        <p class="text-lg text-blue-800 mt-2">Category: {{ result.category }}</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mt-4">
+                        <div class="text-center p-3 bg-blue-50 rounded-lg">
+                            <p class="text-sm text-blue-600">Height</p>
+                            <p class="font-semibold text-blue-900">{{ result.height }} cm</p>
+                        </div>
+                        <div class="text-center p-3 bg-blue-50 rounded-lg">
+                            <p class="text-sm text-blue-600">Weight</p>
+                            <p class="font-semibold text-blue-900">{{ result.weight }} kg</p>
+                        </div>
+                        <div class="text-center p-3 bg-blue-50 rounded-lg">
+                            <p class="text-sm text-blue-600">Age</p>
+                            <p class="font-semibold text-blue-900">{{ result.age }} years</p>
+                        </div>
+                        <div class="text-center p-3 bg-blue-50 rounded-lg">
+                            <p class="text-sm text-blue-600">Gender</p>
+                            <p class="font-semibold text-blue-900">{{ result.gender|title }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>
