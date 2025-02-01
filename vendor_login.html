@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Portal - Login & Signup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ebf2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .vendor-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 15px;
+            font-weight: bold;
+            color: #888;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab.active {
+            color: #2c3e50;
+            border-bottom-color: #3498db;
+        }
+
+        .form-container {
+            display: none;
+        }
+
+        .form-container.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .form-footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #888;
+        }
+
+        .form-footer a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .vendor-container {
+                padding: 20px;
+                margin: 0 10px;
+            }
+
+            .tabs {
+                flex-direction: column;
+            }
+
+            .tab {
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .tab.active {
+                border-bottom-color: #3498db;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="vendor-container">
+
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('login')">Vendor Login</div>
+            <div class="tab" onclick="switchTab('signup')">Create Account</div>
+        </div>
+
+        <div id="login" class="form-container active">
+            <form>
+                <div class="form-group">
+                    <label for="login-email">Business Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your business email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="submit-btn">Sign In</button>
+                <div class="form-footer">
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+
+        <div id="signup" class="form-container">
+            <form>
+                <div class="form-group">
+                    <label for="signup-company">Company Name</label>
+                    <input type="text" id="signup-company" placeholder="Enter your company name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Business Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your business email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-phone">Phone Number</label>
+                    <input type="tel" id="signup-phone" placeholder="Enter your business phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Create Password</label>
+                    <input type="password" id="signup-password" placeholder="Create a strong password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password">Confirm Password</label>
+                    <input type="password" id="signup-confirm-password" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="submit-btn">Create Vendor Account</button>
+                <div class="form-footer">
+                    By creating an account, you agree to our <a href="#">Terms of Service</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tab) {
+            var tabs = document.getElementsByClassName('tab');
+            var forms = document.getElementsByClassName('form-container');
+            
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].className = tabs[i].className.replace(" active", "");
+            }
+            
+            for (var i = 0; i < forms.length; i++) {
+                forms[i].className = forms[i].className.replace(" active", "");
+            }
+            
+            if (tab === 'login') {
+                tabs[0].className += " active";
+            } else {
+                tabs[1].className += " active";
+            }
+            
+            document.getElementById(tab).className += " active";
+        }
+    </script>
+</body>
+</html>
