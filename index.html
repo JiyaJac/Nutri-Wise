@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTrack - Your Personal Nutrition Assistant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ebecf0 0%, #b8e3f8 100%);
+            
+            
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+        .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;  /* Space between logo and text */
+}
+
+.logo {
+    width: 40px; /* Set the logo width */
+    height: 40px; /* Set the logo height */
+    overflow: hidden; /* Ensure image fits within the bounds */
+}
+
+.logo img {
+    width: 100%; /* Make the image fill the logo div */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.brand-name {
+    font-size: 28px;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            
+            width: 10%;
+            height: 10%;
+            background-color: #1e90ff;
+            border-radius: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 10px;
+        }
+
+        .brand-name {
+            font-size: 28px;
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 4rem;
+            gap: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: #003366;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            
+            font-size: 20px;
+            color: #4e34dc;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .get-started {
+            background-color: #1e90ff;
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(30, 144, 255, 0.2);
+        }
+
+        .get-started:hover {
+            background-color: #0066cc;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                </div>
+                <div class="brand-name">NUTRITRACK</div>
+            </div>
+        </nav>
+        
+        <main class="hero">
+            <h1>Track Your Nutrition Journey</h1>
+            <p>
+                Welcome to NutriTrack, Your personal health companion! NutriTrack helps you calculate your BMI, track your daily calorie needs, and provides AI-generated meal recommendations tailored to your goals.
+            </p>
+            <button class="get-started" onclick="window.location.href = 'http://127.0.0.1:5500/Tinkerhack/login/signup.html'">Get Started</button>
+
+
+        </main>
+    </div>
+</body>
+</html>
