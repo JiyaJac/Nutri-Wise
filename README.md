@@ -22,7 +22,7 @@ against their suggested daily goal of maintaining a healthy lifestyle.
 Maintaining a healthy diet can be overwhelming, with many people struggling to track their calorie intake, choose balanced meals, and stay within their ideal nutrition goals. Without personalized guidance, it’s easy to fall into unhealthy eating habits.
 
 ### The Solution
-[How are you solving it? Keep it fun!]
+Meet NutriTrack - your friendly wellness companion that takes the headache out of healthy eating! We crunch the numbers for you, using your personal BMI to whip up a perfect daily calorie plan that fits your lifestyle like a glove. No more getting lost in confusing nutrition math or wondering if you're on the right track. Think of us as your pocket nutritionist, giving you clear, personalized guidance to help you rock your health goals. 
 
 ## Technical Details
 ### Technologies/Components Used
