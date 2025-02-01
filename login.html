@@ -171,7 +171,7 @@
                     <span class="toggle-password" onclick="togglePassword('confirmPassword')">👁️</span>
                 </div>
             </div>
-            <button onclick="signup()">Sign Up</button>
+            <button onclick=signup()>Sign Up</button>
         </div>
     </div>
 
@@ -224,36 +224,40 @@
         }
 
         function signup() {
-            const username = document.getElementById('signupUsername').value;
-            const email = document.getElementById('signupEmail').value;
-            const password = document.getElementById('signupPassword').value;
-            const confirmPass = document.getElementById('confirmPassword').value;
+    const username = document.getElementById('signupUsername').value;
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+    const confirmPass = document.getElementById('confirmPassword').value;
 
-            // Validation
-            if (!username || !email || !password || !confirmPass) {
-                alert('Please fill in all fields');
-                return;
-            }
+    // Validation
+    if (!username || !email || !password || !confirmPass) {
+        alert('Please fill in all fields');
+        return;
+    }
 
-            if (!validateEmail(email)) {
-                alert('Please enter a valid email address');
-                return;
-            }
+    if (!validateEmail(email)) {
+        alert('Please enter a valid email address');
+        return;
+    }
 
-            if (!validatePassword(password)) {
-                alert('Password must be at least 8 characters long');
-                return;
-            }
+    if (!validatePassword(password)) {
+        alert('Password must be at least 8 characters long');
+        return;
+    }
 
-            if (password !== confirmPass) {
-                alert('Passwords do not match');
-                return;
-            }
+    if (password !== confirmPass) {
+        alert('Passwords do not match');
+        return;
+    }
 
-            // Here you would typically make an API call to your backend
-            console.log('Signup attempt:', { username, email });
-            alert('Sign up successful!');
-        }
+    // Redirect to another page after successful signup
+    window.location.href = "http://127.0.0.1:5500/Tinkerhack/login/details.html";  // Fixed file extension
+
+    // Logging signup details
+    console.log('Signup attempt:', { username, email });
+    alert('Sign up successful!');
+}
+
     </script>
 </body>
 </html>
