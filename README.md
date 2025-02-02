@@ -29,7 +29,7 @@ Meet NutriTrack - your friendly wellness companion that takes the headache out o
 For Software:
 - HTML, CSS, JavaScript, Python, StreamLit
 - Django
-- [libraries]
+- os,sys,streamlit,requests,google.generativeai
 - VS Code, GitHub, Google API
 
 ### Implementation
