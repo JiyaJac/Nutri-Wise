@@ -52,8 +52,10 @@ Sign Up Page
 ![image](https://github.com/user-attachments/assets/68f09299-d211-409f-8017-ea9470c03a36)
 This helps you sign up for NUTRITRACK by entering your login credentials.
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+AI Prompt App and Nutrition Calculator
+![image](https://github.com/user-attachments/assets/ec55c834-9701-414e-9137-0154154db59c)
+The AI is here to clarify any doubts you may have about nutrition. It can tell you the calories present in different food items and also suggest recipes based on
+your recommended daily calorie intake level.
 
 
 # Build Photos
@@ -72,12 +74,10 @@ This helps you sign up for NUTRITRACK by entering your login credentials.
 [Add your demo video link here]
 *Explain what the video demonstrates*
 
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
 - Jiya Mary Jacob: API and AI integration
-- Niya Shine: Back-end devolopment
+- Niya Shine: Back-end development
 - Alna Rebecca Siby: Front-end development 
 ---
 Made with ❤️ at TinkerHub
