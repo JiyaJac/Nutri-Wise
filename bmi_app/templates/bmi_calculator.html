@@ -22,6 +22,11 @@
             box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.2);
         }
     </style>
+    <script type="text/javascript">
+        function redirectToPage(){
+            windows.location.href="";
+        }
+    </script>
 </head>
 <body class="gradient-bg min-h-screen py-12 px-4">
     <div class="max-w-md mx-auto glass-card p-8">
@@ -98,5 +103,6 @@
             {% endif %}
         {% endif %}
     </div>
+<button type="button" onclick="redirectToPage()">Go to Another Page</button>
 </body>
 </html>
