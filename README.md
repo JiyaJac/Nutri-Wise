@@ -46,11 +46,11 @@ For Software:
 # Screenshots (Add at least 3)
 NUTRITRACK Home Page
 ![nutritrack home page](https://github.com/user-attachments/assets/c320b13b-fccf-475c-bf89-c51887fc405e)
+NUTRITRACK is your personal health companion! NutriTrack helps you calculate your BMI, track your daily calorie needs, and provides AI-generated meal recommendations tailored to your goals. 
 
-*Add caption explaining what this shows*
-
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+Sign Up Page 
+![image](https://github.com/user-attachments/assets/68f09299-d211-409f-8017-ea9470c03a36)
+This helps you sign up to NUTRITRACK by entering your login credentials.
 
 ![Screenshot3](Add screenshot 3 here with proper name)
 *Add caption explaining what this shows*
