@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily Calorie Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #e6f3ff 0%, #c1e3ff 100%);
+        }
+
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #1e90ff;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2c5282;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 2px solid #90cdf4;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #4299e1;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #4299e1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2b6cb0;
+        }
+
+        #result {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background-color: #ebf8ff;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .result-text {
+            color: #2c5282;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Calorie Calculator</h1>
+        <div class="input-group">
+            <label for="bmi">Your BMI</label>
+            <input type="number" id="bmi" step="0.1" placeholder="Enter your BMI" required>
+        </div>
+        <div class="input-group">
+            <label for="activity">Activity Level</label>
+            <select id="activity">
+                <option value="1.2">Sedentary (little or no exercise)</option>
+                <option value="1.375">Lightly active (light exercise 1-3 days/week)</option>
+                <option value="1.55">Moderately active (moderate exercise 3-5 days/week)</option>
+                <option value="1.725">Very active (hard exercise 6-7 days/week)</option>
+                <option value="1.9">Extra active (very hard exercise & physical job)</option>
+            </select>
+        </div>
+        <button onclick="calculate()">Calculate Daily Calories</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculate() {
+            const bmi = parseFloat(document.getElementById('bmi').value);
+            const activity = parseFloat(document.getElementById('activity').value);
+
+            if (!bmi) {
+                alert('Please enter your BMI');
+                return;
+            }
+
+            // Base calories for average adult based on BMI category
+            let baseCalories;
+            if (bmi < 18.5) {
+                baseCalories = 2300; // Higher base calories for underweight
+            } else if (bmi < 25) {
+                baseCalories = 2000; // Standard base calories for normal weight
+            } else if (bmi < 30) {
+                baseCalories = 1800; // Lower base calories for overweight
+            } else {
+                baseCalories = 1600; // Lowest base calories for obese
+            }
+
+            // Adjust for activity level
+            const adjustedCalories = Math.round(baseCalories * activity);
+
+            // Determine recommendations based on BMI
+            let recommendation;
+            if (bmi < 18.5) {
+                recommendation = `To reach a healthy weight, consider consuming ${adjustedCalories + 500} calories daily to gain weight gradually.`;
+            } else if (bmi < 25) {
+                recommendation = `To maintain your healthy weight, aim for ${adjustedCalories} calories daily.`;
+            } else if (bmi < 30) {
+                recommendation = `To reach a healthy weight, consider consuming ${adjustedCalories - 500} calories daily for gradual weight loss.`;
+            } else {
+                recommendation = `To reach a healthy weight, consider consuming ${adjustedCalories - 750} calories daily. Please consult a healthcare provider for personalized advice.`;
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <div class="result-text">
+                    <strong>Recommended Daily Calories:</strong><br><br>
+                    ${recommendation}
+                </div>
+            `;
+            resultDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
