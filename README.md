@@ -44,7 +44,9 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
+NUTRITRACK Home Page
+![nutritrack home page](https://github.com/user-attachments/assets/c320b13b-fccf-475c-bf89-c51887fc405e)
+
 *Add caption explaining what this shows*
 
 ![Screenshot2](Add screenshot 2 here with proper name)
