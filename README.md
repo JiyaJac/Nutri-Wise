@@ -57,14 +57,12 @@ This helps you sign up to NUTRITRACK by entering your login credentials.
 
 
 # Build Photos
-![Team](Add photo of your team here)
+![image](https://github.com/user-attachments/assets/74263cba-4e18-4d69-9fe3-d84fe75db1c8)
+
+![image](https://github.com/user-attachments/assets/bb0de37b-69e7-4d23-ab0a-8872b8f1c50a)
 
 
-![Components](Add photo of your components here)
-*List out all components shown*
 
-![Build](Add photos of build process here)
-*Explain the build steps*
 
 ![Final](Add photo of final product here)
 *Explain the final build*
