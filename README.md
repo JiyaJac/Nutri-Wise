@@ -11,7 +11,7 @@
 - Member 3: Niya Shine - Govt. Model Engineering College Thrikkakara
 
 ### Hosted Project Link
-[mention your project hosted project link here]
+https://github.com/JiyaJac/Tink-her-hack-3.0.git
 
 ### Project Description
 NUTRITRACK is a personalized nutrition assistant that helps users manage their health by calculating BMI and providing daily calorie intake recommendations.
@@ -29,7 +29,7 @@ Meet NutriTrack - your friendly wellness companion that takes the headache out o
 For Software:
 - HTML, CSS, JavaScript, Python, StreamLit
 - Django
-- os,sys,streamlit,requests,google.generativeai
+- os, sys, streamlit, requests, google.generativeai
 - VS Code, GitHub, Google API
 
 ### Implementation
@@ -50,7 +50,7 @@ NUTRITRACK is your personal health companion! NutriTrack helps you calculate you
 
 Sign Up Page 
 ![image](https://github.com/user-attachments/assets/68f09299-d211-409f-8017-ea9470c03a36)
-This helps you sign up to NUTRITRACK by entering your login credentials.
+This helps you sign up for NUTRITRACK by entering your login credentials.
 
 ![Screenshot3](Add screenshot 3 here with proper name)
 *Add caption explaining what this shows*
