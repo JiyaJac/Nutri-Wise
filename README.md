@@ -34,11 +34,6 @@ For Software:
 
 ### Implementation
 For Software:
-# Installation
-[commands]
-
-# Run
-[commands]
 
 ### Project Documentation
 For Software:
@@ -55,7 +50,8 @@ This helps you sign up for NUTRITRACK by entering your login credentials.
 AI Prompt App and Nutrition Calculator
 ![image](https://github.com/user-attachments/assets/ec55c834-9701-414e-9137-0154154db59c)
 The AI is here to clarify any doubts you may have about nutrition. It can tell you the calories present in different food items and also suggest recipes based on
-your recommended daily calorie intake level.
+your recommended daily calorie intake level. 
+The nutrition calculator gives you your recommended calorie intake level based on your BMI.
 
 
 # Build Photos
