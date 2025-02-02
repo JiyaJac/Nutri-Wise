@@ -146,6 +146,7 @@
                 </div>
             </div>
             <button onclick="login()">Login</button>
+            
         </div>
 
         <div id="signupForm" class="form">
@@ -217,7 +218,7 @@
                 alert('Please enter a valid email address');
                 return;
             }
-
+            window.location.href = " http://127.0.0.1:8000/";
             // Here you would typically make an API call to your backend
             console.log('Login attempt:', { email });
             alert('Login successful!');
