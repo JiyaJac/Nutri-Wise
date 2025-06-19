@@ -8,7 +8,7 @@ st.markdown("""
 <style>
     /* Gradient background */
     .stApp {
-        background: linear-gradient(135deg, #D0EFFF 0%, #DCC9FC 100%);
+        background-color: #c1e3ff; /* Light Blue */
     }
     
     
@@ -47,7 +47,7 @@ st.markdown("""
     
     /* Button styling */
     .stButton > button {
-        background: linear-gradient(90deg, #ADD8E6, #D8B0FF);
+        background: white;
         color: #4B0082;
         border: none;
         border-radius: 5px;
