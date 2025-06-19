@@ -4,16 +4,16 @@ import streamlit as st
 import requests
 import google.generativeai as genai
 
-st.markdown(
-    """
-    <style>
-        .stApp {
-            background-color: #c1e3ff; /* Light Blue */
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+#st.markdown(
+#    """
+#    <style>
+#        .stApp {
+#          background-color: #c1e3ff; /* Light Blue */
+#       }
+#   </style>
+#   """,
+#   unsafe_allow_html=True
+#)
 
 genai.configure(api_key="AIzaSyDhge203wnvNPMrkCaf76Miy8l4xraXv5E")
 model = genai.GenerativeModel("gemini-1.5-flash")
