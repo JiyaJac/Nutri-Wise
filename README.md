@@ -1,4 +1,4 @@
-# NUTRITRACK 🎯
+# NUTRITRACK 
 
 
 ## Basic Details
