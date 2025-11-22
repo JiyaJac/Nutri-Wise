@@ -59,18 +59,6 @@ The nutrition calculator gives you your recommended calorie intake level based o
 
 ![image](https://github.com/user-attachments/assets/bb0de37b-69e7-4d23-ab0a-8872b8f1c50a)
 
-
-
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
-### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-
 ## Team Contributions
 - Jiya Mary Jacob: API and AI integration
 - Niya Shine: Back-end development
